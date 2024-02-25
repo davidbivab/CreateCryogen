@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.davids.createcryogen.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "CreateCryogen.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
