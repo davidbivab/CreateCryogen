@@ -1,6 +1,9 @@
 package net.davids.createcryogen;
 
 import com.mojang.logging.LogUtils;
+import com.momosoftworks.coldsweat.api.event.core.BlockTempRegisterEvent;
+import com.momosoftworks.coldsweat.api.registry.BlockTempRegistry;
+import net.davids.createcryogen.items.SomeBlock;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
@@ -33,4 +36,8 @@ import org.slf4j.Logger;
 @Mod(CreateCryogen.MODID)
 public class CreateCryogen {
     public static final String MODID = "createcryogen";
+    @SubscribeEvent
+    public static void onStartRegister(BlockTempRegisterEvent event){
+        event.register(new SomeBlock());
+    }
 }
